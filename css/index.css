@@ -209,6 +209,17 @@ body{
     color: deepskyblue;
 }
 
+.linkToHome{
+    width: 20%;
+    border: 2px blue solid;
+    margin: auto;
+}
+
+.linkToHome a{
+    margin-left: 30%;
+    text-align: center;
+}
+
 
 
 
