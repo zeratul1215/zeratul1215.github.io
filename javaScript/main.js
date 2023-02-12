@@ -9,6 +9,16 @@ var pics =[
         introduce : "my github page",
         href : "https://github.com/zeratul1215"
     },
+    {
+        picSource: "../img/part.png",
+        introduce: "particle system",
+        href: "../Graphics/part/index.html"
+    },
+    {
+        picSource: "../img/raytracer.png",
+        introduce: "ray tracer",
+        href: "../Graphics/rayTracer/index.html"
+    }
 ]
 
 var id = 1;

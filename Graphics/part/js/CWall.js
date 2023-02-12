@@ -8,13 +8,13 @@ WTYPE_ZWALL_LO = 6
 WTYPE_ZWALL_HI = 7;
 WTYPE_ANCHOR = 8;       // Lock one particle at location xpos,ypos,zpos
 WTYPE_SEPERATE = 9;        // Connects 2 particles with fixed-length separation
-WTYPE_TORNADO = 10;
-WTYPE_FIRE = 11;
+TORNADO_CONSTRAINT = 10;
+FIRE_CONSTRAINT = 11;
 WTYPE_PBALL = 12;       // solid sphere centered at particle with index e0;
 WTYPE_MAXVAR = 13;     
 
 var Kbouncy = 1.0;  // Coeff. of restoration for constraint surfaces
-var pBallRadius = 0.1;  // constraint ball radius
+var pBallRadius = 0.2;  // constraint ball radius
 var pBallCenter = [0.0, 0.0, 1.0];  // constraint ball center
 var ballRadius = 0.05;  // radius of particle balls
 

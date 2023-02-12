@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>particle system</title>
+    <title>particle</title>
   </head>
 	<!--	Create the HTML5 'canvas' element in which we will run WebGL
 	-->
@@ -11,26 +11,25 @@
     	Please use a browser that supports "canvas"
     </canvas> 
 	<br> 
-	<b>Particle System Controls:</b> 
+	<b>Controls:</b>
   <br>
-  <b>r/R key:</b> add random speed. 
-  <b>Space-bar:</b> single-step.    
-  <b>p or P key:</b> pause/resume.	
-  <br>
-
-  <p>
-    <b>'WASD'</b> keys to change camera lookat directions. <br>
-    <b>'+-'</b> keys to go forward or backward in gaze direction. <br>
-    <b>Arrow</b> keys to move camera positions.
-    <b>Drag mouse</b> to move green constraint ball.
-  </p>
+    <div>Space-bar: single-step.</div>
+    <div>P: pause/resume</div>
+    <div>use WASD to move around, use mouse to look around, just like a FPS game</div>
+    <div>press j to lock the camera direction</div>
+    <div>make sure you check the flock move first, then the tornado and the wind</div>
+    <div>when "flock move" is off, it does not mean the birds are all not moving
+    <br>instead, it is the whole flock flying around one point
+      <br>the flock moves randomly, it may fly really far away
+    </div>
+    <div>use the spring net to check different solver's stability</div>
+    <div>you can control how fierce the fire is by changing the value</div>
     <script src="./lib/webgl-utils.js"></script>
     <script src="./lib/webgl-debug.js"></script>
     <script src="./lib/cuon-utils.js"></script>
     <script src="./lib/cuon-matrix-quat03.js"></script>
     <script type="text/javascript" src="./lib/dat.gui.min.js"></script>
     <script src="./js/CPartSys.js"></script>
-    <script src="./js/CPart.js"></script>
     <script src="./js/CForcer.js"></script>
     <script src="./js/CWall.js"></script>
     <script src="./js/VBO-Lib.js"></script>

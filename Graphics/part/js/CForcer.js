@@ -9,7 +9,9 @@ F_SPRING_TET = 6;
 F_WIND = 7;     // Blowing-wind-like force-field;fcn of 3D position
 F_TORNADO = 8;
 F_FLOCK = 9;
-F_MAXKINDS = 10; // 'max' is always the LAST name in our list;
+F_SPRINGNET = 10;
+F_FIRE = 11;
+F_MAXKINDS = 12; // 'max' is always the LAST name in our list;
 
 class CForcer {
     forceType;  // sets the kind of force this object describes
@@ -22,14 +24,17 @@ class CForcer {
     K_drag = 0.985;  // force = -velocity*K_drag.
     
     // F_SPRING Single Spring variables
-    K_spring = 3.0; // Spring stiffness
-    K_springdamp = 0.1; // Spring damping
+    K_spring = 30; // Spring stiffness
+    K_springdamp = 0.2; // Spring damping
     K_springlen = 0.0;  // Spring rest length
+    K_restLength = 0.2;
     fixedPoint = [0.0, 0.0, 0.0];  //  Endpoint of spring that's fixed
+    springNetE1 = [];
+    springNetE2 = [];
 
     // Wind
     D_wind = 1; 
-    v_wind = [1.0, 0.0, 0.0];
+    v_wind = [-1.0, 0.0, 0.0];
 
     // Tornado
     T_strength = 1;
@@ -38,6 +43,13 @@ class CForcer {
     // Flock
     neighborInnerR = 0.05;  // neighbour inner radius of a particle
     neighborOuterR = 0.2;  // neighbour out radius of a particle
+    FlockCenter = [0,0,1];
+
+
+    //Fire
+    k_up = 5;
+
+
 
     constructor(forceType){
         this.forceType = forceType;
